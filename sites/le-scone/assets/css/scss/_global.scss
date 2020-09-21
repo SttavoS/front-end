@@ -1,0 +1,252 @@
+// General
+body {
+    background-color: $lightBeige;
+    border: 10px solid $mediumBeige;
+    color: $brown;
+
+    @include device(small) {
+        border: none;
+    }
+}
+
+p {
+    @include type1(18);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+// Intro
+.title {
+    @include type1(18);
+    text-transform: uppercase;
+
+    @include device(small) {
+        margin-bottom: 40px;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 75%;
+        float: right;
+        height: 2px;
+        background-color: $brown;
+        margin-top: 14px;
+
+        @include device(medium) {
+            width: 60%;
+        }
+    }
+
+}
+
+.intro {
+    margin-top: 60px;
+
+    @include device(small) {
+        margin-top: 20px;
+    }
+}
+
+.logo {
+    margin-bottom: 60px;
+}
+
+.intro-info {
+    border-right: 2px solid $brown;
+    max-width: 320px;
+
+    p {
+        padding-top: 10px;
+    }
+    p:first-child {
+        border-bottom: 2px solid $brown;
+        padding-bottom: 10px;
+    }
+}
+
+.intro-phone {
+    color: $darkBeige;
+    @include device(small) {
+        margin-bottom: 40px;
+    }
+    &::after {
+        content: '/ / / /';
+        display: block;
+        color: $brown;
+        font-size: 220px;
+        margin-top: 200px;
+        letter-spacing: -90px;
+
+        @include device(medium) {
+            font-size: 160px;
+            margin-top: 80px;
+            letter-spacing: -70px;
+        }
+        @include device(small) {
+            display: none;
+        }
+    }
+}
+
+.opening-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: $green;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.intro-photo {
+    border: 10px solid $mediumBeige;
+    width: 100%;
+}
+// Menu
+.menu { 
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    @include device(small) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+.menu-category {
+    margin-bottom: 60px;
+    h2 {
+        @include type2(24);
+        margin-bottom: 1em;
+    }
+    li {
+        @include type1(18);
+        line-height: convertToEm(35, 18);
+
+        span {
+            font-family: $font2;
+            color: $darkBeige;
+            display: inline-block;
+            width: 70px;
+            margin-right: 10px;
+            text-align: right;
+            margin-left: -80px;
+
+            @include device(small) {
+                margin-left: 0px;
+                width: auto;
+            }
+        }
+    }
+    img {
+        border-radius: 50%;
+        border: 10px solid $mediumBeige;
+        position: absolute;
+        right: 0;
+        margin-top: 35px;
+
+        @include device(large) {
+            right: 120px;
+        }
+        @include device(small) {
+            width: 150px;
+            margin-top: 60px;
+        }
+    }
+}
+// Contact
+.contact {
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    @include device(small) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+.contact form {
+    label {
+        @include type1(18);
+        display: block;
+    }
+    input, textarea {
+        @include type1(18);
+        color: $brown;
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        border: 2px solid $darkBeige; 
+        background: transparent;
+        margin-bottom: 1em;
+        &:hover, &:focus {
+            outline: none;
+            border-color: $mediumBeige;
+        }       
+    }
+    textarea {
+        width: 100%;
+        min-height: 120px;
+        max-height: 240px;
+        resize: vertical;
+    }
+}
+
+button {
+    @include type1(18);
+    cursor: pointer;
+    color: $darkBeige;
+    text-transform: uppercase;
+    border: 2px solid $darkBeige;
+    background: transparent;
+    display: block;
+    width: 200px;
+    padding-top: 5px;
+    @include box-shadow(5px 5px 0 -2px $mediumBeige, 5px 5px 0 0 $darkBeige);
+    transition: .3s;
+    &:hover {
+        @include box-shadow(3px 3px 0 -2px $mediumBeige, 3px 3px 0 0 $darkBeige);
+    }
+}
+
+.contact-info {
+    display: inline-block;
+    color: $darkBeige;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    @include device(large) {
+        float: right;
+        text-align: right;
+        margin-top: -3em;
+    }
+}
+
+.contact-map {
+    display: block;
+    @include box-shadow(0 0 0 10px $mediumBeige);
+    clear: both;
+    img {
+        width: 100%;
+    }
+}
+
+// Footer
+footer {
+    padding: 20px 0;
+    background-color: $brown;
+    @include box-shadow(0 0 0 10px $brown);
+    p {
+        color: $lightBeige;
+        @include device(small) {
+            text-align: center;
+        }
+    }
+    img {
+        float: right;
+        @include device(small) {
+            float: none;
+            margin: 20px auto;
+        }
+    }
+}

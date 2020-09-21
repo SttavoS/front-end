@@ -1,0 +1,32 @@
+// Typography
+
+@function convertToEm($pixel, $context: 16) {
+    @return $pixel / $context + em;
+}
+
+@mixin type1($size) {
+    font-family: $font1;
+
+    @if $size == 18 {
+        font-size: convertToEm(18);
+        line-height: convertToEm(30, 18);
+    }
+}
+
+@mixin type2($size) {
+    font-family: $font2;
+    
+    @if $size == 18 {
+        font-size: convertToEm(18);
+        line-height: convertToEm(30, 18);
+    } @else if $size == 24 {
+        font-size: convertToEm(24);
+        line-height: convertToEm(30, 24);
+    }
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
