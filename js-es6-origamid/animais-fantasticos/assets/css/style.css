@@ -2,6 +2,8 @@
 @import './animation.css';
 @import './modal.css';
 @import './responsive.css';
+@import './tooltip.css';
+@import './dropdown-menu.css';
 
 .menu {
 	grid-column: 3 / 5;
