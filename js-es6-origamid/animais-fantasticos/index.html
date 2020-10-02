@@ -15,7 +15,8 @@
 <body>
 	<div class="grid-container">
 		<nav class="menu" data-menu="smooth">
-			<ul>
+			<button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+			<ul data-menu="list" id="menu">
 				<li><a href="#animals">Animais</a></li>
 				<li data-dropdown>
 					<a href="sobre.html">Sobre</a>
@@ -31,7 +32,7 @@
 				<li><a data-modal="open" href="login.html">Login →</a></li>
 			</ul>
 		</nav>
-		<section class="grid-section animais" data-anime="scroll" id="animals">
+		<section class="grid-section animais" data-animation="scroll" id="animals">
 			<h1 class="titulo">Animais Fantásticos</h1>
 			<ul class="animais-lista" data-tab="menu">
 				<li>
@@ -54,7 +55,7 @@
 				</li>
 			</ul>
 			<div class="animais-descricao" data-tab="content">
-				<section data-anime="show-down">
+				<section data-animation="show-down">
 					<h2>Raposa</h2>
 					<p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -62,7 +63,7 @@
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
 				</section>
 				
-				<section data-anime="show-right">
+				<section data-animation="show-right">
 					<h2>Esquilo</h2>
 					<p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae.</p>
 					<p>No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim, quatipuru, agutipuru ou acutipuru.</p>
@@ -71,7 +72,7 @@
 					<p>Como todos os roedores, possui presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
 				</section>
 				
-				<section data-anime="show-down">
+				<section data-animation="show-down">
 					<h2>Urso</h2>
 					<p>Os Ursos constituem uma família de mamíferos plantígrados, da ordem Carnivora, geralmente de grande porte, contendo os ursos e os pandas.</p>
 					<p>Embora classificado como urso, e logo após, como procionídeo, junto com o panda-vermelho, o panda-gigante foi recolocado dentro da família dos ursídeos devido às novas pesquisas genéticas.</p> 
@@ -79,7 +80,7 @@
 					<p>Os ursídeos são geralmente animais omnívoros, mas se alimentam principalmente de carne.</p>
 				</section>
 				
-				<section data-anime="show-right">
+				<section data-animation="show-right">
 					<h2>Lobo</h2>
 					<p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -87,7 +88,7 @@
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
 				</section>
 				
-				<section data-anime="show-down">
+				<section data-animation="show-down">
 					<h2>Macaco</h2>
 					<p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -95,7 +96,7 @@
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
 				</section>
 				
-				<section data-anime="show-right">
+				<section data-animation="show-right">
 					<h2>Leão</h2>
 					<p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
 					<p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -105,9 +106,9 @@
 			</div>
 		</section>
 		
-		<section class="grid-section faq" data-anime="scroll" id="faq">
+		<section class="grid-section faq" data-animation="scroll" id="faq">
 			<h1 class="titulo">FAQ</h1>
-			<dl class="faq-lista" data-anime="accordion">
+			<dl class="faq-lista" data-animation="accordion">
 				<dt>Qual a idade dos animais?</dt>
 					<dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio,
 						caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
@@ -120,8 +121,38 @@
 					<dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
 			</dl>
 		</section>
+
+		<section class="grid-section numbers" data-animation="scroll">
+			<h1 class="titulo">Números</h1>
+			<div class="grid-number">
+				<div class="animal-number">
+					<h3>Lobos</h3>
+					<span data-number>484</span>
+				</div>
+				<div class="animal-number">
+					<h3>Raposa</h3>
+					<span data-number>1248</span>
+				</div>
+				<div class="animal-number">
+					<h3>Esquilos</h3>
+					<span data-number>7532</span>
+				</div>
+				<div class="animal-number">
+					<h3>Ursos</h3>
+					<span data-number>480</span>
+				</div>
+				<div class="animal-number">
+					<h3>Macacos</h3>
+					<span data-number>787</span>
+				</div>
+				<div class="animal-number">
+					<h3>Leões</h3>
+					<span data-number>108</span>
+				</div>
+			</div>
+		</section>
 		
-		<section class="grid-section contato" data-anime="scroll" id="contato">
+		<section class="grid-section contato" data-animation="scroll" id="contato">
 			<h1 class="titulo">Contato</h1>
 			<div class="map" data-tooltip="" aria-label="Proximo ao estacionamento.">
 				<img src="./assets/img/mapa.png">

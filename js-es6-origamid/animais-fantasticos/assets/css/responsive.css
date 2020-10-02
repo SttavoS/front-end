@@ -1,9 +1,9 @@
 @media (max-width: 700px) {
-	body {
+	.grid-container {
 		grid-template-columns: 1fr;
 	}
 	.menu, .grid-section, .copy {
-		grid-column: 1;
+		grid-column: 1 / 5;
 	}
 	.grid-section {
 		grid-template-columns: 100px 1fr;

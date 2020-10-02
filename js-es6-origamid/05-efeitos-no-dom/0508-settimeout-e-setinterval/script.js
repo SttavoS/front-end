@@ -1,36 +1,38 @@
 // Mude a cor da tela para azul e depois para vermelho a cada 2s.
-// function mudarClasse() {
-//   document.body.classList.toggle('active');
+// const screen = document.body;
+// function changeColor() {
+//     screen.classList.toggle('active');
 // }
 
-// setInterval(mudarClasse, 2000);
+// setInterval(changeColor, 2000);
+
 
 // Crie um cronometro utilizando o setInterval. Deve ser possível
 // iniciar, pausar e resetar (duplo clique no pausar).
-const iniciar = document.querySelector('.iniciar');
-const pausar = document.querySelector('.pausar');
-const tempo = document.querySelector('.tempo');
+const start = document.querySelector('.iniciar');
+const pause = document.querySelector('.pausar');
+const displayTime = document.querySelector('.tempo');
 
-iniciar.addEventListener('click', iniciarTempo);
-pausar.addEventListener('click', pausarTempo);
-pausar.addEventListener('dblclick', resetarTempo);
+start.addEventListener('click', runTime);
+pause.addEventListener('click', pauseTime);
+pause.addEventListener('dblclick', resetTime);
 
 let i = 0;
 let timer;
 
-function iniciarTempo() {
-  timer = setInterval(() => {
-    tempo.innerText = i++;
-  }, 100);
-  iniciar.setAttribute('disabled', '');
+function runTime() {
+    timer = setInterval(() => {
+        displayTime.innerHTML = i++;
+    }, 100);
+    start.setAttribute('disabled', '');
 }
 
-function pausarTempo() {
-  clearInterval(timer);
-  iniciar.removeAttribute('disabled');
+function pauseTime() {
+    clearInterval(timer);
+    start.removeAttribute('disabled');
 }
 
-function resetarTempo() {
-  tempo.innerText = 0;
-  i = 0;
+function resetTime() {
+    displayTime.innerText = 0;
+    i = 0;
 }

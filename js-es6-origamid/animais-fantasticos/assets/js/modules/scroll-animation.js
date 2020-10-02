@@ -1,5 +1,5 @@
 export default function initScrollAnimation() {
-    const sectionScroll = document.querySelectorAll('[data-anime="scroll"]');
+    const sectionScroll = document.querySelectorAll('[data-animation="scroll"]');
 
     if (sectionScroll.length) {
         const halfWindow = window.innerHeight * 0.6;
@@ -11,7 +11,7 @@ export default function initScrollAnimation() {
         
                 if (isSectionVisible) {
                     section.classList.add('ativo');
-                } else {
+                } else if(section.classList.contains('ativo')) {
                     section.classList.remove('ativo');
                 }
             });

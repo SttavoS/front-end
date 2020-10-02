@@ -38,25 +38,25 @@
 }
 
 /* ACCORDION */
-[data-anime="accordion"] dd {
+[data-animation="accordion"] dd {
 	display: none;
 }
 
-[data-anime="accordion"] dd.ativo {
+[data-animation="accordion"] dd.ativo {
 	display: block;
 	animation: slideDown .5s forwards;
 }
 
-[data-anime="accordion"] dt {
+[data-animation="accordion"] dt {
 	cursor: pointer;
 }
 
-[data-anime="accordion"] dt::after {
+[data-animation="accordion"] dt::after {
 	content: '⬎';
 	margin-left: 10px;
 }
 
-[data-anime="accordion"] dt.ativo::after {
+[data-animation="accordion"] dt.ativo::after {
 	content: '⬑ ';
 }
 
@@ -72,13 +72,13 @@
 }
 
 /* SCROLL */
-.js [data-anime="scroll"] {
+.js [data-animation="scroll"] {
 	opacity: 0;
 	transform: translate3d(-30px, 0, 0);
 	transition: .3s;
 }
 
-.js [data-anime="scroll"].ativo {
+.js [data-animation="scroll"].ativo {
 	opacity: 1;
 	transform: translate3d(0, 0, 0);	
 }
