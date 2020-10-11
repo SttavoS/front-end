@@ -8,7 +8,7 @@ export default function initNumbersAnimation() {
             let start = 0;
     
             const timer = setInterval(() => {
-                start = start + increment;
+                start += increment;
                 number.innerText = start;
                 if (start > total) {
                     number.innerText = total
@@ -18,6 +18,7 @@ export default function initNumbersAnimation() {
         });
     }
 
+    let observer;
     function handleMutation(mutation) {
         if (mutation[0].target.classList.contains('ativo')) {
             observer.disconnect();
@@ -26,7 +27,7 @@ export default function initNumbersAnimation() {
     }
 
     const observerTarget = document.querySelector('.numbers');
-    const observer = new MutationObserver(handleMutation);
+    observer = new MutationObserver(handleMutation);
 
-    observer.observe(observerTarget, {attributes: true});
+    observer.observe(observerTarget, { attributes: true });
 }

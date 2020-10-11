@@ -10,13 +10,6 @@ export default function initSmoothScroll() {
             behavior: "smooth",
             block: 'start'
         });
-
-        // Alternavite
-        // const topOfSection = section.offsetTop;
-        // window.scrollTo({
-        //     top: topOfSection,
-        //     behavior: "smooth"
-        // });
     }
 
     internalLinks.forEach((link) => {
