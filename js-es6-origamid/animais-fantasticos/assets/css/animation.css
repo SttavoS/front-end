@@ -42,7 +42,7 @@
 	display: none;
 }
 
-[data-animation="accordion"] dd.ativo {
+[data-animation="accordion"] dd.active {
 	display: block;
 	animation: slideDown .5s forwards;
 }
@@ -56,7 +56,7 @@
 	margin-left: 10px;
 }
 
-[data-animation="accordion"] dt.ativo::after {
+[data-animation="accordion"] dt.active::after {
 	content: '⬑ ';
 }
 
