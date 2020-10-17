@@ -1,5 +1,5 @@
 import SmoothScroll from './modules/smooth-scroll.js';
-import initScrollAnimation from './modules/scroll-animation.js';
+import ScrollAnimation from './modules/scroll-animation.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tab-navigation.js';
 import Modal from './modules/modal.js';
@@ -32,4 +32,5 @@ initDropdownMenu();
 initMenuMobile();
 initSchedule();
 
-initScrollAnimation();
+const scroll = new ScrollAnimation('[data-animation="scroll"]');
+scroll.init();
