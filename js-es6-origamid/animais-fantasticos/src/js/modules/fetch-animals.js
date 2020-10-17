@@ -1,6 +1,8 @@
 import NumbersAnimation from './numbers-animation.js';
 
-export default function initFetch() {
+export default function fetchAnimals(url, target) {
+    const numberGrid = document.querySelector(target);
+
     function createAnimal(animal) {
         const div = document.createElement('div');
         div.classList.add('animal-number');
@@ -10,11 +12,10 @@ export default function initFetch() {
         return div;
     }
 
-    async function fetchAnimals(url) {
+    async function createAnimals() {
         try {
             const animalsResponse = await fetch(url);
-            const animalsJSON = await animalsResponse.json();
-            const numberGrid = document.querySelector('.grid-number');
+            const animalsJSON = await animalsResponse.json();            
         
             animalsJSON.forEach(animal => {
                 const animalDiv = createAnimal(animal);
@@ -28,8 +29,6 @@ export default function initFetch() {
         }        
     }
     
-    
-    
-    fetchAnimals('./animals-api.json');
+    return createAnimals();
 }
 
