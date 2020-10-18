@@ -4,7 +4,7 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tab-navigation.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropdownMenu from './modules/dropdown-menu.js';
+import DropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initSchedule from './modules/schedule.js';
 import fetchAnimals from './modules/fetch-animals.js';
@@ -28,7 +28,9 @@ tooltips.init();
 fetchAnimals('../../animals-api.json', '.grid-number');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
-initDropdownMenu();
+const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
+dropdownMenu.init();
+
 initMenuMobile();
 initSchedule();
 
