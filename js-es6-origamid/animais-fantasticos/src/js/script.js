@@ -6,7 +6,7 @@ import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
-import initSchedule from './modules/schedule.js';
+import Schedule from './modules/schedule.js';
 import fetchAnimals from './modules/fetch-animals.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 
@@ -25,8 +25,8 @@ modal.init();
 const tooltips = new Tooltip('[data-tooltip]');
 tooltips.init();
 
-fetchAnimals('../../animals-api.json', '.grid-number');
-fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
+const scroll = new ScrollAnimation('[data-animation="scroll"]');
+scroll.init();
 
 const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
 dropdownMenu.init();
@@ -34,7 +34,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initSchedule();
+const schedule = new Schedule('[data-week]', 'open');
+schedule.init();
 
-const scroll = new ScrollAnimation('[data-animation="scroll"]');
-scroll.init();
+fetchAnimals('../../animals-api.json', '.grid-number');
+fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
