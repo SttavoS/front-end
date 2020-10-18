@@ -9,7 +9,7 @@ export default class TabNav {
         this.content.forEach((section) => {
             section.classList.remove(this.activeClass);
         });
-        const direction = this.content[index].dataset.anime;
+        const direction = this.content[index].dataset.animation;
         this.content[index].classList.add(this.activeClass, direction);
     }
 
