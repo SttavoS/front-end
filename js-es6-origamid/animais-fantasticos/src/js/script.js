@@ -7,6 +7,7 @@ import Tooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import Schedule from './modules/schedule.js';
+import SlideNav from './modules/slide-nav.js';
 import fetchAnimals from './modules/fetch-animals.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 
@@ -36,6 +37,10 @@ menuMobile.init();
 
 const schedule = new Schedule('[data-week]', 'open');
 schedule.init();
+
+const slide = new SlideNav('.slide-container', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
 
 fetchAnimals('../../animals-api.json', '.grid-number');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');

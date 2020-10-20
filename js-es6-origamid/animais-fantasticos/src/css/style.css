@@ -6,6 +6,7 @@
 @import './menu.css';
 @import './responsive.css';
 @import './numbers.css';
+@import './slide.css';
 
 .grid-section {
 	grid-column: 2 / 4;
